@@ -9,4 +9,5 @@ export default {
 const Template: Story<UsefulCompsProps> = (args) => <UsefulComps {...args} />;
 
 export const Primary = Template.bind({});
+
 Primary.args = {};
