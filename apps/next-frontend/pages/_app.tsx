@@ -9,16 +9,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
                 <title>Messenger</title>
             </Head>
             <div className="app">
-                <header className="flex">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                        src="/nx-logo-white.svg"
-                        alt="Nx logo"
-                        width="75"
-                        height="50"
-                    />
-                    <h1>Welcome to the Clean Messenger!</h1>
-                </header>
+                <header className="flex"></header>
                 <main>
                     <Component {...pageProps} />
                 </main>
