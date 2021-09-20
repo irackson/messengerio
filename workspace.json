@@ -83,6 +83,49 @@
                     }
                 }
             }
+        },
+        "useful-comps": {
+            "root": "libs/useful-comps",
+            "sourceRoot": "libs/useful-comps/src",
+            "projectType": "library",
+            "targets": {
+                "build": {
+                    "executor": "@nrwl/web:package",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "dist/libs/useful-comps",
+                        "tsConfig": "libs/useful-comps/tsconfig.lib.json",
+                        "project": "libs/useful-comps/package.json",
+                        "entryFile": "libs/useful-comps/src/index.ts",
+                        "external": ["react/jsx-runtime"],
+                        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+                        "assets": [
+                            {
+                                "glob": "libs/useful-comps/README.md",
+                                "input": ".",
+                                "output": "."
+                            }
+                        ]
+                    }
+                },
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": [
+                            "libs/useful-comps/**/*.{ts,tsx,js,jsx}"
+                        ]
+                    }
+                },
+                "test": {
+                    "executor": "@nrwl/jest:jest",
+                    "outputs": ["coverage/libs/useful-comps"],
+                    "options": {
+                        "jestConfig": "libs/useful-comps/jest.config.js",
+                        "passWithNoTests": true
+                    }
+                }
+            }
         }
     },
     "cli": {
