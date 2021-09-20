@@ -126,6 +126,31 @@
                     }
                 }
             }
+        },
+        "useful-types": {
+            "root": "libs/useful-types",
+            "sourceRoot": "libs/useful-types/src",
+            "projectType": "library",
+            "targets": {
+                "lint": {
+                    "executor": "@nrwl/linter:eslint",
+                    "outputs": ["{options.outputFile}"],
+                    "options": {
+                        "lintFilePatterns": ["libs/useful-types/**/*.ts"]
+                    }
+                },
+                "build": {
+                    "executor": "@nrwl/node:package",
+                    "outputs": ["{options.outputPath}"],
+                    "options": {
+                        "outputPath": "dist/libs/useful-types",
+                        "tsConfig": "libs/useful-types/tsconfig.lib.json",
+                        "packageJson": "libs/useful-types/package.json",
+                        "main": "libs/useful-types/src/index.ts",
+                        "assets": ["libs/useful-types/*.md"]
+                    }
+                }
+            }
         }
     },
     "cli": {

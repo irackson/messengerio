@@ -15,7 +15,8 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
-            "@irackson/useful-comps": ["libs/useful-comps/src/index.ts"]
+            "@irackson/useful-comps": ["libs/useful-comps/src/index.ts"],
+            "@irackson/useful-types": ["libs/useful-types/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

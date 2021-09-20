@@ -36,6 +36,9 @@
         },
         "useful-comps": {
             "tags": []
+        },
+        "useful-types": {
+            "tags": ["types"]
         }
     }
 }

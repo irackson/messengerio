@@ -4,13 +4,13 @@ import styled from 'styled-components';
 export interface UsefulCompsProps {}
 
 const StyledUsefulComps = styled.div`
-    color: pink;
+    color: blue;
 `;
 
 export function UsefulComps(props: UsefulCompsProps) {
     return (
         <StyledUsefulComps>
-            <h1>Welcome UsefulComps!</h1>
+            <h1>Welcome to UsefulComps!</h1>
         </StyledUsefulComps>
     );
 }
